@@ -18,10 +18,6 @@ export default function Home() {
   }
 
   return (
-    <Head>
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="shortcut icon" href="/favicon.png" />
-   </Head>
     <div className="container">
       <div className="header">
         <img className="logo" src="/IMG_1057.png" alt="Spro Deal logo" />
