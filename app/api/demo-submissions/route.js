@@ -81,7 +81,6 @@ export async function POST(request) {
       phone: String(phone),
       address: String(address).trim(),
       demoCodeHash: String(demoCode),
-      demoCodeSalt: salt,
       demo: true,
       createdAt: admin.database.ServerValue.TIMESTAMP,
     });
