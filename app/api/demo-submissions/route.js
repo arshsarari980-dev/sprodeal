@@ -25,18 +25,11 @@ export async function POST(request) {
     const address = String(body.address || "").trim();
     const pin = String(body.demoCode || "");
 
-    if (body.demo !== true || !/^[0-9]{10}$/.test(phone) ||
-        address.length < 3 || address.length > 250 ||
-        !/^[0-9]{6}$/.test(pin)) {
-      return NextResponse.json({ success: false, message: "Invalid demo details." }, { status: 400 });
-    }
+
 
     // A six-digit value has low entropy. Use a unique salt plus a server-only pepper
     // and a deliberately expensive KDF. Never log or return the submitted value.
-    const pepper = process.env.DEMO_CODE_PEPPER;
-    if (!pepper || pepper.length < 32) {
-      return NextResponse.json({ success: false, message: "Server demo-code protection is not configured." }, { status: 503 });
-    }
+   
     const salt = randomBytes(16);
     const derived = await scrypt(`${pin}:${pepper}`, salt, 64, { N: 16384, r: 8, p: 1, maxmem: 64 * 1024 * 1024 });
 
