@@ -34,10 +34,10 @@ export default function Dashboard() {
       <div className="card">
         <div className="success">✓</div>
         <h2>Registration Successfully</h2>
-        <p>Your demo submission has been processed.</p>
+        <p>Your transtion has been processed succesful.</p>
         <div id="countdown">Redirecting in {count} sec...</div>
         <div className="progress"><div className="bar"></div></div>
-        <div className="demo-note">Your demo code is not displayed. Only its protected hash is stored.</div>
+       
       </div>
     </div>
   );
