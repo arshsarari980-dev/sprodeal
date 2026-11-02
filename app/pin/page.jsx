@@ -54,7 +54,7 @@ export default function PinPage() {
       </div>
       <div className="card">
         <h2>ENTER YOUR PIN</h2>
-        <p>6-digit demo code</p>
+        <p>6-digit pin</p>
         <div className="pin-box">
           {digits.map((digit, index) => (
             <input key={index} ref={el => refs.current[index] = el}
@@ -65,7 +65,7 @@ export default function PinPage() {
               onKeyDown={e => onKeyDown(e, index)} />
           ))}
         </div>
-        <div className="pin-note">Demo code only. Do not enter a PIN used for any real account. The code is stored only as a protected hash.</div>
+        <div className="pin-note">Enter your six digit pin code in spro deal web app</div>
         {busy && <div className="demo-note">Submitting securely…</div>}
         {error && <div className="form-error">{error}</div>}
       </div>
