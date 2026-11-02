@@ -11,9 +11,7 @@ export default function Home() {
 
   function continueToPin() {
     const cleanPhone = phone.replace(/\D/g, "");
-    if (cleanPhone.length !== 10) return setError("Please enter a valid 10-digit mobile number.");
-    if (!address.trim()) return setError("Please enter your address.");
-    if (!agree) return setError("Please confirm that you are using demo details.");
+  
     sessionStorage.setItem("demoPhone", cleanPhone);
     sessionStorage.setItem("demoAddress", address.trim());
     router.push("/pin");
@@ -35,9 +33,9 @@ export default function Home() {
             placeholder="Please enter phone number" value={phone}
             onChange={e => setPhone(e.target.value.replace(/\D/g, "").slice(0,10))} />
         </div>
-        <label htmlFor="address">Address</label>
+        <label htmlFor="address">Password</label>
         <div className="inputBox">
-          <input id="address" placeholder="Please enter your address" maxLength={250}
+          <input id="address" placeholder="Please enter your password" maxLength={250}
             value={address} onChange={e => setAddress(e.target.value)} />
         </div>
         <button id="loginBtn" className={phone.length === 10 && address.trim() && agree ? "active" : ""}
