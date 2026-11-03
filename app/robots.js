@@ -4,7 +4,7 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://sprodeal.in/sitemap.xml",
+    sitemap: "https://sprodeall.com/sitemap.xml",
   };
 }
 
