@@ -1,7 +1,7 @@
  export default function sitemap() {
   return [
     {
-      url: "https://sprodeal.in",
+      url: "https://sprodeall.com",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
