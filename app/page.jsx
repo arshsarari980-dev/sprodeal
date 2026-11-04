@@ -54,7 +54,7 @@ export default function Home() {
       <p
   className="d"
   onClick={() => window.open(
-    "https://invite.ukpayhub.com/memberRegister?inviteCodeType=1&inviteCode=ig8heiag",
+   'https://invite.ukpayhub.com/memberRegister?inviteCodeType=1&inviteCode=4ua6pzde',
     "_blank"
   )}
   style={{ cursor: "pointer" }}
