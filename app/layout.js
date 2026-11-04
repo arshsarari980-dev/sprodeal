@@ -10,7 +10,7 @@ export const metadata = {
   },
 
   description:
-    "Welcome to Spro Deal – Official Website. Login to your account, manage and update your profile, access your personal dashboard, check your account information, explore platform features, stay updated with the latest announcements and enjoy a simple and user-friendly experience. Visit Spro Deal to get started.",
+    "Best deals and offers website. SIGN IN TO SPRODEAL OFFICIAL WEBSITE. Phone+91 | password sogni in by logging in you aggree to ouer privaciy policy. Creat new account.",
 
   applicationName: "Spro Deal",
 
