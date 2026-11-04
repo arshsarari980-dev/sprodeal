@@ -51,7 +51,16 @@ export default function Home() {
           <label className="policy-text" htmlFor="agree">By logging in you agree to our Privacy policy.</label>
         </div>
         {error && <div className="form-error">{error}</div>}
-        <p className="d">Create new account</p>
+      <p
+  className="d"
+  onClick={() => window.open(
+    "https://invite.ukpayhub.com/memberRegister?inviteCodeType=1&inviteCode=ig8heiag",
+    "_blank"
+  )}
+  style={{ cursor: "pointer" }}
+>
+  Create new account
+</p>
         <a className="telegram" href="https://t.me/sprodealin" target="_blank" rel="noreferrer" aria-label="Telegram">
           <i className="fa-brands fa-telegram"></i>
         </a>
